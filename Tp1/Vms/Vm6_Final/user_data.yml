@@ -1,0 +1,12 @@
+---
+users:
+  - name: antna
+    primary_group: antna
+    groups: wheel
+    shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    lock_passwd: false
+    passwd: $6$iuqbPcBadz2HSt97$kUUI7qoWbrH4fTY.CpErukwCZVMnWUWzepoYP3PIHGaveGm1VGWBuNWRB/vPKXdh/UNSOwAuljFv3unFLrw07/
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCrpd9MU1MDMbfCWZRmw/dv6jlK4KibcUQr/iRvcQe0EHOf8GKQ4Xjmuz5ZAqt1nU4hcsXpqfJiyGTK1pps4qYvb4bCqnLdmaCNqQKqDfxuy8fyci92Uw/UJt7IQRH6DrIqZRvQLE+Qsbb+9tV8UKUaeII4qy7Lptu4gOU4+CTvhr1sYCDYPZxJc0R/k5CR8BUwVYV4EGvDEHsdeOFlKNdwToPkIAGChHiYnUJN0rMzEAMODO9IOv3fm2x7DdBePAWGshKDpIMKacoy1XWahtBrs9P/SMGmz4M8h447Qc133FRprcuoEGcaZ9TtSN5wYpyqtq4fN0QFsPzg9/MSKmdQZ1VHfjlHu+doacFi3KExfrOVPp4hdBz6TE6eRMbaku5s/w3SxBYK+7+GtJgk14uhwKmbk3LOp65J8OXiAnrAGkkbIk1r9F17mVZWdrjCjpYeLdML2teREMQdo4pXSOs48lFKdhKcsWAmpM3Fw7XCWn+2kp2ZdRR6/338RRxXf6dCj3qiWQpwAfYcvljpyGKvNTPT1b0YWy6HidRM0XGTV2flnwypdl8ug4XgV0LgJjgxCl5TjXWEo61rPa2qh7Ky1i5SvO2FYVqTVjQf8xu32y3niwtGRq28L+VEQ2Mk3rb632Ae08Xh9EnWiN0drf7Q8cTEdgaOHu37h87WsTIJoQ== antoi@LAPTOP-OA204NMO
+

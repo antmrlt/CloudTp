@@ -223,12 +223,28 @@ vagrant box add rocky-cloud-init rocky-cloud-init.box
 
 🌞 **Tester !**
 
-- écrire un `Vagrantfile` qui utilise la box repackagée
-- il faudra ajouter un CD-ROM (un `.iso`) à la VM qui contient nos données `cloud-init`
-  - uiui un `.iso` c'est un CD-ROM virtuel, et ui c'est la méthode plutôt standard avec `cloud-init`
-  - référez-vous aux instructions juste en dessous pour savoir comment construire ce `.iso`
-- allumez la VM avec `vagrant up` et vérifiez que `cloud-init` a bien créé l'utilisateur, avec le bon password, et la bonne clé SSH
+```Vagrantfile
+Vagrant.configure("2") do |config|
+  config.vm.box = "rocky-cloud-init"
 
-➜ **Construire le `.iso` qui contient les données `cloud-init`**
+  config.vm.cloud_init :user_data, content_type: "text/cloud-config", path: "user_data.yml"
+end
+```
+
+user_data.yml :
+```yml
+---
+users:
+  - name: antna
+    primary_group: antna
+    groups: wheel
+    shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    lock_passwd: false
+    passwd: $6$iuqbPcBadz2HSt97$kUUI7qoWbrH4fTY.CpErukwCZVMnWUWzepoYP3PIHGaveGm1VGWBuNWRB/vPKXdh/UNSOwAuljFv3unFLrw07/ # admin
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCrpd9MU1MDMbfCWZRmw/dv6jlK4KibcUQr
+```
+
 
 
