@@ -1,0 +1,6 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "rocky-cloud-init"
+
+  config.vm.provision "file", source: "cloud-init.iso", destination: "/tmp/cloud-init.iso"
+  config.vm.provision "shell", inline:  "sudo mount -o loop /tmp/cloud-init.iso /mnt"
+end
