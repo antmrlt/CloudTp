@@ -52,13 +52,14 @@ repo_gpgcheck=1
 | 22   | TCP   | SSH   |
 | 8472 | UDP   | VXLAN |
 
-```
+```bash
 [vagrant@kvm ~]$ sudo firewall-cmd --permanent --zone=public --add-port=22/tcp
 success
 [vagrant@kvm ~]$ sudo firewall-cmd --permanent --zone=public --add-port=8472/udp
 success
 [vagrant@kvm ~]$ sudo firewall-cmd --reload
-success```
+success
+```
 
 🌞 **Handle SSH**
 
