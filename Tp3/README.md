@@ -98,14 +98,6 @@ PING 10.220.220.2 (10.220.220.2) 56(84) bytes of data.
 ➜ Voir [le fichier de capture eth1](./eth1.pcap) et [le fichier de capture vxlan_bridge](./vxlan-bridge.pcap)
 
 ```bash
-# capturer le trafic de eth1, et l'enregistrer dans un fichier yo.pcap
-tcpdump -i eth1 -w yo.pcap
+[oneadmin@kvm1 ~]tcpdump -i eth1 -w eth1.pcap
 ```
 
-➜ **Analysez les deux captures**
-
-- dans la capture de `eth1` vous devriez juste voir du trafic UDP entre les deux noeuds
-  - si vous regardez bien, vous devriez que ce trafic UDP contient lui-même des trames
-- dans la capture de `vxlan-bridge`, vous devriez voir les "vraies" trames échangées par les deux VMs
-
-![VXLAN](./img/vxlan.jpg)
