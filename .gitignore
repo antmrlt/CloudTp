@@ -1,7 +1,9 @@
 
 Tp1/Vms/Vm5_CloudInit/rocky-cloud-init.box
 /Tp1.5/.vagrant
-/Tp1/Vms/Vm6_Final/.vagrant/bundler
-/Tp1/Vms/Vm6_Final/.vagrant/machines/default
+/Tp1/Vms/Vm6_Final/.vagrant
 *.rb
 /Tp2/dhcp/.vagrant
+/Tp3/frontend.one/.vagrant
+/Tp3/kvm1.one/.vagrant
+/Tp3/kvm2.one/.vagrant
